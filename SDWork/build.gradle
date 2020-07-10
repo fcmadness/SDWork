@@ -37,12 +37,3 @@ war {
     //classpath configurations.moreLibs // adds a configuration to the WEB-INF/lib dir.
     //webXml = file('src/someWeb.xml') // copies a file to WEB-INF/web.xml
 }
-
-task createWar(type : War){
-    destinationDir = file("$buildDir")
-    baseName = "sdwork.war"
-    version = "1.1"
-    caseSensitive = true
-    classifier = "SNAPSHOT"
-    from "src"
-}
