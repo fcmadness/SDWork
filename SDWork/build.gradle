@@ -9,26 +9,24 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'war'
-    //id 'org.gretty' version '2.2.0'
+    id 'org.gretty' version '3.0.3'
 }
-/*
+
 gretty {
     integrationTestTask = 'test'  
 }
-*/
+
 repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    flatDir { dirs "lib" }
     jcenter()
+    flatDir { dirs "lib" }
 }
 
 dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0' 
     testImplementation 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:2.7.19'  
-    //testCompile 'io.github.bonigarcia:webdrivermanager:1.6.1' 
-    //testCompile 'org.seleniumhq.selenium:selenium-java:3.3.1' 
+    testCompile 'io.github.bonigarcia:webdrivermanager:1.6.1' 
+    testCompile 'org.seleniumhq.selenium:selenium-java:3.3.1' 
 }
 war {
     from 'web' // adds a file-set to the root of the archive
