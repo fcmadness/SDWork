@@ -1,4 +1,3 @@
-package test;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -28,7 +27,7 @@ public class HelloWorldTest {
 
         when(response.getWriter()).thenReturn(printWriter);
 
-        new HelloServlet().doGet(request, response);
+        new HelloWorld().doGet(request, response);
 
         assertEquals("Hello, World!", stringWriter.toString());
     }
@@ -38,7 +37,7 @@ public class HelloWorldTest {
         when(request.getRequestDispatcher("response.jsp"))
             .thenReturn(requestDispatcher);
 
-        new HelloServlet().doPost(request, response);
+        new HelloWorld().doPost(request, response);
 
         verify(request).setAttribute("user", "World");
         verify(requestDispatcher).forward(request,response);
@@ -50,7 +49,7 @@ public class HelloWorldTest {
         when(request.getRequestDispatcher("response.jsp"))
             .thenReturn(requestDispatcher);
 
-        new HelloServlet().doPost(request, response);
+        new HelloWorld().doPost(request, response);
 
         verify(request).setAttribute("user", "Dolly");
         verify(requestDispatcher).forward(request,response);

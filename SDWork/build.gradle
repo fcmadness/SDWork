@@ -25,12 +25,13 @@ dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0' 
     testImplementation 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:2.7.19'  
-    testCompile 'io.github.bonigarcia:webdrivermanager:1.6.1' 
-    testCompile 'org.seleniumhq.selenium:selenium-java:3.3.1' 
+    testCompile 'io.github.bonigarcia:webdrivermanager:4.1.0' 
+    testCompile 'org.seleniumhq.selenium:selenium-java:3.141.59' 
 }
 war {
-    from 'web' // adds a file-set to the root of the archive
-    webInf { from 'web/WEB-INF' } // adds a file-set to the WEB-INF dir.
+    //from 'web' // adds a file-set to the root of the archive
+    //webInf { from 'web/WEB-INF' } // adds a file-set to the WEB-INF dir.
+    //webInf { from 'src/additionalWebInf' } // adds a file-set to the WEB-INF dir.
     //classpath fileTree('additionalLibs') // adds a file-set to the WEB-INF/lib dir.
     //classpath configurations.moreLibs // adds a configuration to the WEB-INF/lib dir.
     //webXml = file('src/someWeb.xml') // copies a file to WEB-INF/web.xml

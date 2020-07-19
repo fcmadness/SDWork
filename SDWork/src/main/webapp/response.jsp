@@ -5,5 +5,7 @@
     </head>
     <body>
         <h2>Hello, ${user}!</h2>
+        <br/>
+        <h2>Bye ${user}...  </h2>
     </body>
 </html>
